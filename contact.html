@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BroHub</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/88d54f1693.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <img src="img/logo.png" class="logo" alt="Logo" height="55px" width="55px">
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a class="active" href="contact.html">CONTACT</a></li>
+                <a id="close"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </section>
+
+    <section id="contact-welcome">
+        <h2>Hello there</h2>
+        <h4>Ask us anything or share your feedback. We'd love to hear from you!</h4>
+    </section>
+
+    <section class="contact">
+        <div id="contact-container">
+            <div class="con-text">
+                <h5>Start a conversation</h5>
+                <div class="chat-bots">
+                    <img id="chat-bot-a" src="img\chatbot-icon.png" alt="">
+                    <button onclick="window.location.href='chatbot/chat.html';" class="con-btn">Chat With Bot</button>
+                    <span>Our bot can assist you by helping you with a few questions.</span>
+                </div>
+                <div class="chat-email">
+                    <img id="email-a" src="img\chatbot-icon.png" alt="">
+                    <button onclick="window.location.href='mailto:info@brohub.tech';" class="con-email-btn">Email Us</button>
+                    <span>Send us a message via email and we'll respond to it as soon as possible.</span>
+                </div>
+                <h5 class="message-us">Message us on our socials</h5>
+
+                <div class="con-socials">
+                    <a href="mailto:info@brohub.tech" class="google"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.linkedin.com/in/brohub-tech-653115264?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BcBRJZ7dMTV%2B2urwa3MFcRA%3D%3D" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="f-container">
+        <div class="f-header">
+            <h2>Send Us a Message</h2>
+        </div>
+        <form method="post" action="contactform.php" class="form" id="form">
+            <div class="form-control">
+                <label for="first-name">First Name</label>
+                <input type="text" placeholder="Enter your first name" id="first-name">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name" id="last-name">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="text" placeholder="user@example.com" id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Your message</label>
+                <input type="text" placeholder="Your message goes here" id="textbox">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="Terms-of-Service" id="checkbox">&nbsp; I agree to the <a href="#">Terms of Service</a> of BroHub.
+            </div>
+
+            <input class="submit" type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <footer class="copyright">
+        <div class="copyright">
+            <div class=" follow ">
+                <h4>Follow Us</h4>
+                <div class="icon ">
+                    <i class="fab fa-facebook-f "></i>
+                    <i class="fab fa-twitter "></i>
+                    <i class="fab fa-instagram "></i>
+                    <i class="fab fa-pinterest-p "></i>
+                </div>
+                <br><br>
+            </div>
+            <a href="# ">Terms of Service</a><br><br>
+            <p class="f-location"><i class="fa-solid fa-location-dot"></i> &nbsp; Lagos, Nigeria</p>
+            <p> © 2023, BroHub <br> All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+
+</html>
