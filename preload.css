@@ -4,8 +4,8 @@
 
 #loader {
     position: absolute;
-    left: 40%;
-    top: 65%;
+    left: 45%;
+    top: 75%;
     z-index: 1;
 }
 
@@ -66,9 +66,9 @@
     }
     #loader img {
         position: relative;
-        padding-top: 30px;
+        padding-top: 10px;
         width: 70%;
-        right: 20%;
+        right: 30%;
     }
     #load #load-text h1 {
         padding-top: 20px;
