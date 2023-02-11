@@ -1404,6 +1404,9 @@
             font-size: 24px;
         }
         /* Home Hero Section*/
+         #hero-text {
+            top: 5%;
+        }
         h1 {
             text-align: center;
         }
@@ -1715,8 +1718,8 @@
         .wl {
             height: 310px;
         }
-        #hero-text {
-            top: 7%;
+         #hero-text {
+            top: 5%;
         }
     }
     
