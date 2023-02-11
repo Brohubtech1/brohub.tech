@@ -1,0 +1,76 @@
+#aDiv {
+    display: none;
+}
+
+#loader {
+    position: absolute;
+    left: 40%;
+    top: 65%;
+    z-index: 1;
+}
+
+#loader video {
+    width: 30%;
+}
+
+.a-bottom {
+    position: relative;
+    -webkit-animation-name: a-bottom;
+    -webkit-animation-duration: 1s;
+    animation-name: a-bottom;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes a-bottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes a-bottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#load img {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+
+#load #load-text {
+    text-align: center;
+}
+
+#load #load-text h1 {
+    color: black;
+}
+
+@media screen and (max-width:539px) {
+    #load img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 10%;
+        border-radius: 5px;
+    }
+    #loader video {
+        position: relative;
+        padding-top: 30px;
+        width: 70%;
+        right: 20%;
+    }
+    #load #load-text h1 {
+        padding-top: 20px;
+    }
+}

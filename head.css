@@ -1,0 +1,9 @@
+#hero-text {
+    top: 60% !important;
+}
+
+@media (max-width: 539px) {
+    #hero-text {
+        top: 72% !important;
+    }
+}
