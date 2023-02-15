@@ -1,0 +1,146 @@
+#aDiv {
+    display: none;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    margin: -95px 0 0 -50px;
+    border: 12px solid purple;
+    border-radius: 10%;
+    border-top: 12px solid purple;
+    border-left: 12px solid purple;
+    border-right: 12px solid purple;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader-b {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    margin: -95px 0 0 -50px;
+    border: 12px solid firebrick;
+    border-radius: 10%;
+    border-top: 12px solid firebrick;
+    border-left: 12px solid firebrick;
+    border-right: 12px solid firebrick;
+    -webkit-animation: spin 3s linear infinite;
+    animation: move 3s linear infinite;
+}
+
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#optimize {
+    margin-top: 170px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+#optimize span {
+    color: firebrick;
+}
+
+.a-bottom {
+    position: relative;
+    -webkit-animation-name: a-bottom;
+    -webkit-animation-duration: 1s;
+    animation-name: a-bottom;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes a-bottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes a-bottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#load img {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+
+#load #load-text {
+    text-align: center;
+}
+
+#load #load-text h1 {
+    color: black;
+}
+
+@media screen and (max-width:539px) {
+    #load img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 10%;
+        border-radius: 5px;
+    }
+    #loader img {
+        position: relative;
+        padding-top: 10px;
+        width: 70%;
+        right: 30%;
+    }
+    #load #load-text h1 {
+        padding-top: 20px;
+    }
+}
