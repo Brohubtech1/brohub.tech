@@ -129,18 +129,7 @@
         top: 10%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation-name: mymove;
-        animation-duration: 1s;
         z-index: 99;
-    }
-    
-    @keyframes mymove {
-        from {
-            top: 0px;
-        }
-        to {
-            bottom: auto;
-        }
     }
     
     #hero-text h4 {
@@ -1662,7 +1651,7 @@
         }
         /* Home Hero Section*/
         #hero-text {
-            top: 6.5%;
+            top: 10%;
         }
         h1 {
             text-align: center;
