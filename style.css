@@ -1651,7 +1651,7 @@
         }
         /* Home Hero Section*/
         #hero-text {
-            top: 10%;
+            top: 300px;
         }
         h1 {
             text-align: center;
@@ -1660,14 +1660,7 @@
             font-size: 40px;
             font-weight: 600;
         }
-        @keyframes mymove {
-            from {
-                top: 0px;
-            }
-            to {
-                bottom: auto;
-            }
-        }
+
         /* What We do */
         .services hr {
             margin-left: 38%;
