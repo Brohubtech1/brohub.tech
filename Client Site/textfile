@@ -1,0 +1,37 @@
+html file
+
+<section id="header">
+    <img src="img/logo-a.jpg" alt="Logo">
+    <div id="navbar">
+        <ul>
+            <li>
+                <a class="active" href="#">Profile</a>
+            </li>
+            <li>
+                <a href="#progress">Track Progress</a>
+            </li>
+            <li>
+                <a href="payment.html">Payments</a>
+            </li>
+            <li>
+                <a href="">Troubleshoot</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <a id="close"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+        </ul>
+        <a href="account.html" id="dropbtn" class="tooltip"><i class="fa-regular fa-user"></i><span class="tooltiptext">Your Account</span></a>
+    </div>
+    <div id="mobile">
+        <i id="bar" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+</section>
+
+css file #header { width: 100%; z-index: 999; display: flex; } #navbar { display: flex; position: fixed; margin-top: 50px; padding-top: 12px; padding-bottom: 12px; border-top: 2px solid purple; background-color: rgb(236, 236, 236); box-shadow: 0 5px 15px
+rgb(0 0 0 / 6%); transition: transform 0.1s; z-index: 999; } #navbar.scrolled { transform: translateY(-100%); } #header img { width: 3%; border-radius: 50%; display: flex; margin-left: 38px; margin-right: 39px; } #navbar h3 { color: #222; padding-top:
+8px; padding-left: 8px; min-width: 30%; } #header #navbar ul { display: flex; justify-content: space-between; position: static; padding-left: 30px; padding-right: 70px; padding-top: 11px; } #header #navbar ul li { list-style: none; font-weight: 600; position:
+relative; } #header #navbar ul li a { text-decoration: none; color: purple; transition: 0.3s ease; font-size: 16px; padding-top: 23px; padding-bottom: 23px; padding-left: 22px; padding-right: 22px; } #header #navbar ul li a:hover, #header #navbar ul li
+a.active { color: purple; } #header #navbar ul li a.active:hover { background-color: rgb(255, 177, 255) !important; } #header #navbar ul li a:hover { background-color: rgb(204, 204, 204); } #header #navbar ul li a.active::after { content: " "; width:
+100%; height: 2px; background: purple; position: absolute; bottom: -12px; left: 0px; } #mobile { display: none; align-items: center; } #close { display: none; } script file const bar = document.getElementById('bar'); const close = document.getElementById('close');
+const nav = document.getElementById('navbar'); if (bar) { bar.addEventListener('click', () => { nav.classList.add('active'); }) } if (close) { close.addEventListener('click', () => { nav.classList.remove('active'); }) }

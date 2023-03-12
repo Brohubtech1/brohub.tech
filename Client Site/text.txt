@@ -1,0 +1,55 @@
+<i class="fa-solid fa-square-check"></i><i class="fa-solid fa-square-xmark"></i>
+        var prevScrollpos = window.pageYOffset;
+        var prenav = document.getElementById("prenav");
+        var navbar = document.getElementById("header");
+        var navbarHeight = navbar.offsetHeight;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                prenav.style.transform = "translateY(0)";
+                navbar.style.transform = "translateY(0)";
+            } else if (currentScrollPos > navbarHeight) {
+                prenav.style.transform = "translateY(-100%)";
+                navbar.style.transform = "translateY(-79%)";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        function isElementInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        var fadeIns = document.querySelectorAll('.fade-in');
+
+        function onScroll() {
+            for (var i = 0; i < fadeIns.length; i++) {
+                if (isElementInViewport(fadeIns[i])) {
+                    fadeIns[i].classList.add('is-visible');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', onScroll);
+
+        // Out mobile navbar
+        const bar = document.getElementById('bar');
+        const close = document.getElementById('close');
+        const nav = document.getElementById('navbar');
+
+        if (bar) {
+            bar.addEventListener('click', () => {
+                nav.classList.add('active');
+            })
+        }
+
+        if (close) {
+            close.addEventListener('click', () => {
+                nav.classList.remove('active');
+            })
+        }

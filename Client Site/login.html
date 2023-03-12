@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/f6252292e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <a id="close"><i class="far fa-times" onclick="history.go(-1);"></i></a>
+        <div class="header">
+            <h2>Log In</h2>
+            <p>New client? <a href="signup.html">Create Profile</a></p>
+        </div>
+        <form class="form" id="form">
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="email" placeholder="Enter email address" id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" id="password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <p id="forgot"><a href="#">Forgot Password</a></p>
+
+            <button type="submit" value="Sign Me In" onclick="check(this.form)" class="submit">Log In</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Form input validation
+        function check(form) {
+            if (form.email.value == "admin@gmail.com" && form.password.value == "admin123") {
+                window.open("profile.html");
+            } else {
+                alert("Invalid Email or Password!");
+            }
+        }
+        // form validate
+        const form = document.getElementById('form');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            checkInputs();
+        });
+
+        function checkInputs() {
+            // get the values from the inputs
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+
+            if (emailValue === '') {
+                setErrorFor(email, 'Email is required');
+            } else {
+                setSuccessFor(email);
+            }
+
+            if (passwordValue === '') {
+                setErrorFor(password, 'Password cannot be blank');
+            } else {
+                setSuccessFor(password);
+            }
+        }
+
+        function setErrorFor(input, message) {
+            const formControl = input.parentElement; // .form-control
+            const small = formControl.querySelector('small');
+            formControl.className = 'form-control error';
+            small.innerText = message;
+        }
+
+        function setSuccessFor(input) {
+            const formControl = input.parentElement;
+            formControl.className = 'form-control success';
+        }
+
+        function myFunction() {
+            alert("Strong passwords must contain at least 8 characters, including numeric, alphabetic and special characters.");
+        }
+    </script>
+</body>
+
+</html>
