@@ -1,0 +1,162 @@
+/* Sign Up Page */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand';
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 35px;
+    color: #222;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    font-family: 'Spartan', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 450px;
+    max-width: 100%;
+}
+
+#close {
+    width: 100%;
+}
+
+.container #close .fa-times {
+    display: flex;
+    align-content: flex-start;
+    align-items: right;
+    padding: 20px 30px 0 400px;
+}
+
+.header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 40px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+a {
+    color: red;
+}
+
+.form {
+    padding: 10px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 1px solid rgb(119, 15, 145);
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control.success input {
+    border-color: rgb(130, 15, 145);
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    position: absolute;
+    top: 36px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.check {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+#p-req {
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 0;
+    color: purple;
+    padding: 0 0;
+    cursor: pointer;
+}
+
+#forgot {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    accent-color: purple;
+}
+
+.submit {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    color: #f2f2f2;
+    background-color: rgb(119, 15, 145);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.submit:hover {
+    background-color: rgba(119, 15, 145, 0.801);
+}

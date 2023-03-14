@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/f6252292e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <a id="close"><i class="far fa-times" onclick="history.go(-1);"></i></a>
+        <div class="header">
+            <h2>Create Profile</h2>
+            <p>Already have a profile? <a href="login.html">Log In</a></p>
+        </div>
+        <form class="form" id="form">
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="text" placeholder="brohub@example.com" id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-control">
+                <label>Password</label> (<a span id="p-req" onclick="myFunction()">Strong Password?</a>)
+                <input type="password" placeholder="Input Strong Password" id="password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter Password" id="password-two">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="Terms-of-Service" id="checkbox">&nbsp; I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> of BroHub.
+            </div>
+
+            <button class="submit" type="submit" value="Create Profile">Create Profile</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('form');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const password2 = document.getElementById('password-two');
+        const checkbox = document.getElementById('checkbox');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            checkInputs();
+        });
+
+        function checkInputs() {
+            // get the values from the inputs
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+            const password2Value = password2.value.trim();
+
+            if (emailValue === '') {
+                setErrorFor(email, 'Email is required');
+            } else {
+                setSuccessFor(email);
+            }
+
+            if (passwordValue === '') {
+                setErrorFor(password, 'Password cannot be blank');
+            } else {
+                setSuccessFor(password);
+            }
+
+            if (password2Value === '') {
+                setErrorFor(password2, 'Please confirm your password');
+            } else if (passwordValue !== password2Value) {
+                setErrorFor(password2, 'Passwords do not match');
+            } else {
+                setSuccessFor(password2);
+            }
+        }
+
+        function setErrorFor(input, message) {
+            const formControl = input.parentElement; // .form-control
+            const small = formControl.querySelector('small');
+            formControl.className = 'form-control error';
+            small.innerText = message;
+        }
+
+        function setSuccessFor(input) {
+            const formControl = input.parentElement;
+            formControl.className = 'form-control success';
+        }
+
+        function myFunction() {
+            alert("Strong passwords must contain at least 8 characters, including numeric, alphabetic and special characters.");
+        }
+    </script>
+</body>
+
+</html>
