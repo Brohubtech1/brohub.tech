@@ -1,0 +1,386 @@
+/* Body */
+
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+body {
+    background-color: rgba(128, 0, 128, 0.144);
+}
+
+#pay {
+    display: flex;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -115px;
+    width: 80%;
+    z-index: 999;
+    border-radius: 22px;
+    box-shadow: 0px 16px 22px #2222226b;
+}
+
+#purple {
+    width: 150px;
+    padding-bottom: 44%;
+    background-color: purple;
+    margin-left: 50px;
+    border-radius: 22px;
+}
+
+#pay-flex {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+#left-nav {
+    padding-left: 25px;
+    padding-top: 35px;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+#nav-list {
+    margin-top: 50px;
+}
+
+#nav-list p {
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+#pay-form {
+    padding-left: 40px;
+    padding-top: 35px;
+    padding-right: 35px;
+    width: 80%;
+}
+
+#pay-form h2 {
+    padding-bottom: 4px;
+}
+
+#pay-form p {
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+#pay-form span {
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+
+#pay-form span a {
+    color: purple;
+}
+
+#pay-form hr {
+    margin-bottom: 35px;
+    width: 45px;
+}
+
+
+/*form {
+    padding: 20px;
+}*/
+
+form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+#expiration {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#expiration input[type="number"],
+#expiration input[type="text"] {
+    width: 30% !important;
+}
+
+#expiration input[id="month"] {
+    margin-left: -28px;
+}
+
+#info {
+    display: flex;
+    width: 100%;
+}
+
+#info input {
+    width: 100%;
+}
+
+#info label[for="postal"],
+#info input[id="postal"] {
+    margin-left: 50px;
+    width: 81% !important;
+}
+
+#payment-description {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 35px;
+    width: 40%;
+    border-left: 1.5px solid purple;
+}
+
+#pay-for {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#amount-flex p {
+    text-align: right;
+    margin-top: 10px;
+    color: red;
+}
+
+#payment-description input {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 8px 6px 8px 6px;
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.plan-card {
+    background-color: rgba(128, 0, 128, 0.575);
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.act {
+    background-color: purple;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.6);
+}
+
+.plan-card h4 {
+    font-size: 15px;
+}
+
+.plan-card:hover {
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.6);
+}
+
+.total-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-flex span {
+    color: red;
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.total-amount p {
+    font-weight: 800;
+    font-size: 18px;
+    color: red;
+}
+
+#payment-description button {
+    margin-top: 30px;
+    color: white;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    background: rgba(128, 0, 128, 0.849);
+    box-shadow: 5px 5px 3px #222;
+    cursor: pointer;
+}
+
+#payment-description button:hover {
+    box-shadow: 2px 2px 3px #222;
+    padding-right: 2px;
+    margin-left: 1px;
+}
+
+.error-message {
+    color: red;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+#purple-2 {
+    position: absolute;
+    /* width: 300px;*/
+    height: 50px;
+    margin-left: -150px;
+    background-color: purple;
+    top: 50%;
+}
+
+#purple-3 {
+    width: 300px;
+    height: 50px;
+    background-color: purple;
+    margin-top: 80px;
+}
+
+.vertical-text {
+    margin-top: 45%;
+    writing-mode: vertical-rl;
+}
+
+
+/*
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    outline-color: red;
+}
+
+form .amount-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form .amount-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+form .amount-button:hover {
+    background-color: #0069d9;
+}
+
+form input[type="text"][readonly] {
+    background-color: #eee;
+    color: #555;
+    font-weight: bold;
+}
+
+form #submit-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+form #submit-button:hover {
+    background-color: #218838;
+}
+
+#payment-history {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#payment-history li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#payment-history li:last-child {
+    border-bottom: none;
+}
+
+#payment-history li .date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#payment-history li .amount {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}*/

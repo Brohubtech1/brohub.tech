@@ -1,0 +1,181 @@
+/* Dark Mode Styles */
+
+body.dark-mode {
+    background-color: rgba(37, 26, 37, 0.945);
+}
+
+body.dark-mode #pro-navbar {
+    background-color: rgb(37, 26, 37);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 6%);
+    border-top: 2px solid rgb(168, 107, 168);
+}
+
+body.dark-mode #toggle-dark-mode {
+    color: #fff;
+}
+
+
+/* Pop up */
+
+#popup p {
+    color: #222;
+}
+
+
+/* Mobile */
+
+body.dark-mode #tog-dark-mode {
+    color: #fff;
+}
+
+body.dark-mode #user-name-mob {
+    background-color: rgb(65, 0, 65);
+}
+
+body.dark-mode #user-name-mob h2 {
+    color: #fff;
+}
+
+body.dark-mode #header #pro-navbar ul li a {
+    color: rgb(241, 229, 241);
+}
+
+body.dark-mode #header #pro-navbar ul li a:hover {
+    background-color: rgb(167, 167, 167);
+}
+
+body.dark-mode #profile-pg #right-sect #user-name {
+    border-bottom: 1px solid rgb(236, 207, 236);
+    border-top: 1px solid rgb(236, 207, 236);
+    background-color: rgb(37, 26, 37);
+}
+
+body.dark-mode #right-sect #user-name h2 {
+    color: #fff;
+}
+
+body.dark-mode #right-sect #user-name p {
+    color: rgb(219, 184, 219);
+}
+
+body.dark-mode h3 {
+    color: #fff;
+}
+
+body.dark-mode h4 {
+    color: #fff;
+}
+
+body.dark-mode h5 {
+    color: #fff;
+}
+
+body.dark-mode p {
+    color: #fff;
+}
+
+body.dark-mode a {
+    color: rgb(192, 141, 192);
+}
+
+
+/* Information section */
+
+body.dark-mode #user-profile .user-profile-flex {
+    border-top: 1px solid rgb(236, 207, 236);
+    border-bottom: 1px solid rgb(236, 207, 236);
+}
+
+body.dark-mode #user-profile .user-profile-flex .h-line {
+    border: 1px solid rgb(236, 207, 236);
+}
+
+body.dark-mode #user-profile .user-profile-flex p {
+    color: #fff;
+}
+
+body.dark-mode #user-profile p#update {
+    color: #fff;
+}
+
+body.dark-mode #scope-flex #span {
+    color: rgb(192, 141, 192) !important;
+}
+
+body.dark-mode #scope p {
+    color: #fff;
+}
+
+body.dark-mode .vline {
+    border-bottom: 0.4px solid rgb(236, 207, 236);
+}
+
+
+/* Workflow Section */
+
+body.dark-mode #work-list input[type="checkbox"]:disabled+label {
+    color: white;
+    font-size: 17px;
+}
+
+body.dark-mode #m-work a {
+    color: rgb(192, 141, 192);
+}
+
+body.dark-mode #m-work a:hover {
+    color: rgba(255, 255, 255, 0.781)
+}
+
+body.dark-mode #m-work .delete {
+    color: rgb(255, 107, 107);
+}
+
+
+/* Legal section */
+
+body.dark-mode #legal p {
+    color: #fff;
+}
+
+body.dark-mode #document-upload #fileInput {
+    border: 1px solid rgb(170, 111, 170);
+    accent-color: #fff;
+}
+
+body.dark-mode #document-upload span {
+    color: rgb(192, 141, 192);
+}
+
+
+/* Suggestion */
+
+body.dark-mode #select-feedback label[for="feedback"] {
+    color: #fff;
+}
+
+body.dark-mode #select-feedback select[id="feedback"] {
+    background-color: #e6e6e6;
+}
+
+body.dark-mode #select-feedback label[for="feedback-email"] {
+    color: #fff;
+}
+
+body.dark-mode #select-feedback input[id="feedback-email"] {
+    background-color: #e6e6e6;
+}
+
+body.dark-mode label[for="feedback-box"] {
+    color: #fff;
+}
+
+body.dark-mode #describe-feedback textarea {
+    background-color: #e6e6e6;
+}
+
+
+/* Footer */
+
+body.dark-mode .copyright {
+    background-color: inherit;
+}

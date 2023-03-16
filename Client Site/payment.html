@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Page</title>
+    <script src="https://kit.fontawesome.com/f6252292e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- <section id="header">
+        <div id="pro-navbar">
+            <img src="img/logo-a.jpg" alt="Logo">
+            <ul>
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+                <li>
+                    <a href="#progress">Track Progress</a>
+                </li>
+                <li>
+                    <a class="active" href="payment.html">Payments</a>
+                </li>
+                <li>
+                    <a href="">Troubleshoot</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <a href="account.html" id="dropbtn" class="tooltip"><i class="fa-regular fa-user"></i><span class="tooltiptext">Your Account</span></a>
+        </div>
+    </section>-->
+
+    <section id="pay-flex">
+        <div id="purple"></div>
+
+        <section id="pay">
+            <div id="left-nav">
+                <h4>Adogu Ramoni</h4>
+                <p>ramoniadogu <br>@gmail.com</p>
+
+                <div id="nav-list">
+                    <p>Billing</p>
+                    <p>Payment History</p>
+                    <p>Checkout</p> <br><br><br><br>
+                    <p>Go Back</p>
+                </div>
+            </div>
+
+            <div id="pay-form">
+                <h2>Secure Checkout</h2>
+                <hr>
+
+                <p>Enter your payment details</p>
+                <form id="checkout-form">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email" value="ramoniadogu@gmail.com" readonly>
+
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" required><br>
+
+                    <label for="month">Expiration-date</label>
+                    <div id="expiration">
+                        <input list="pay-month" type="text" id="month" name="expiration-month" maxlength="2" placeholder="MM" required>
+                        <input type="text" id="year" name="expiration-year" maxlength="2" placeholder="YYYY" required>
+                    </div>
+                    <p id="dateError" class="error-message" style="font-size:13px; font-weight:none; margin-top: -18px; display:none;">Please check month and date fields</p>
+
+                    <div id="info">
+                        <div>
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" required><br>
+                        </div>
+
+                        <div>
+                            <label for="postal">Postal Code</label>
+                            <input type="text" id="postal" name="postal-code" required> <br>
+                        </div>
+
+
+                    </div>
+
+                    <span>By proceeding, you agree to the <a href="terms.html">Terms of Service</a>  and <a href="privacy.html">Privacy Policy</a> </span><br><br>
+                </form>
+
+            </div>
+            <div id="payment-description">
+                <p id="pay-for">3D Rendering and Animation</p>
+                <div id="amount-flex">
+                    <p id="pay-for-a">$599.00</p>
+                </div>
+
+                <input type="text" name="discount" id="discount" placeholder="Have a discount code?">
+
+                <div class="plan-card" id="plan-1">
+                    <h4>Pay By Installment</h4>
+                    <p>Price: $299.50</p>
+                </div>
+                <div class="plan-card act" id="plan-2">
+                    <h4>Pay In Full</h4>
+                    <p>Price: $599.00</p>
+                </div>
+
+                <div class="total-flex">
+                    <p>Vat: 10%</p>
+                    <span>$119.8</span>
+                </div>
+                <div class="total-flex">
+                    <p>Discount:</p>
+                    <span>$0</span>
+                </div>
+                <div class="total-amount">
+                    <h3>Total Price:</h3>
+                    <p>$718.8</p>
+                </div>
+
+                <button type="button" id="submit-button">Make Payment</button>
+            </div>
+        </section>
+
+        <div id="purple-2"></div>
+
+    </section>
+
+
+    <script>
+        // form submit
+
+        const form = document.getElementById('checkout-form');
+        const submitButton = document.getElementById('submit-button');
+        const cardField = document.getElementById('card-number');
+        const dateField = document.getElementById('expiration-date');
+        const monthField = document.getElementById('month');
+        const yearField = document.getElementById('year');
+        const cvvField = document.getElementById('cvv');
+        const postalField = document.getElementById('postal');
+
+        function validateForm() {
+            //Prevent Empty Form Submission
+            if (!cardField.value || !dateField.value || !monthField.value || !yearField.value || !cvvField.value || !postalField.value) {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            return true;
+        }
+
+        submitButton.addEventListener('click', () => {
+            if (validateForm()) {
+                form.submit();
+                resetForm();
+            }
+        });
+
+        // update total
+        const plan1 = document.getElementById('plan-1');
+        const plan2 = document.getElementById('plan-2');
+
+        const totalAmount = document.querySelector('.total-amount p')
+        const vatAmount = document.querySelector('.total-flex span')
+
+        plan1.addEventListener('click', () => {
+            totalAmount.textContent = '$419.3'
+            vatAmount.textContent = '$59.9'
+        });
+
+        plan2.addEventListener('click', () => {
+            totalAmount.textContent = '$718.8'
+            vatAmount.textContent = '$119.8'
+        });
+
+        //change payment buttons
+        const button1 = document.getElementById('plan-1');
+        const button2 = document.getElementById('plan-2');
+
+        button1.addEventListener('click', () => {
+            button1.classList.add('act');
+            button2.classList.remove('act');
+        });
+
+        button2.addEventListener('click', () => {
+            button2.classList.add('act');
+            button1.classList.remove('act');
+        });
+    </script>
+</body>
+<script src="script.js"></script>
+
+</html>
